@@ -68,22 +68,22 @@
 
 // Example 3: Complex Transformations
 
-// let products = [
-//     {id:1, name:"iphone", price:1000},
-//     {id:2, name:"MacBook", price:500},
-//     {id:3, name:"s23UltraPro", price:400}
-// ]
+let products = [
+    {id:1, name:"iphone", price:1000},
+    {id:2, name:"MacBook", price:500},
+    {id:3, name:"s23UltraPro", price:400}
+]
 
 
-// let discountPrice = products.map(discount => {
-//     return{
-//         id : discount.id,
-//         name: discount.name,
-//         price: discount.price *0.9 //apply 10% discount
-//     };
-// })
+let discountPrice = products.map(discount => {
+    return{
+        id : discount.id,
+        name: discount.name,
+        price: discount.price *0.9 //apply 10% discount
+    };
+})
 
-// console.log(discountPrice);
+console.log(discountPrice);
 
 
 
