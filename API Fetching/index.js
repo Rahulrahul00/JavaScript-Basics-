@@ -48,11 +48,13 @@ showData.addEventListener('click', ()=>{
         //create a H3 element for product name
         let productName = document.createElement("h3");
         productName.textContent = item.name;
+        productName.style.color = "#fff";
 
 
         //create a p element for the product price
         let productPrice = document.createElement("p");
         productPrice.textContent = `price : ${item.price}₹`;
+        
 
         //create a p element for the product quantity
         let productQty = document.createElement("p");
