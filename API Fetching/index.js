@@ -52,7 +52,16 @@ showData.addEventListener('click', ()=>{
 
         //create a p element for the product price
         let productPrice = document.createElement("p");
-        productPrice.textContent = `price${item.price}`;
+        productPrice.textContent = `price : ${item.price}₹`;
+
+        //create a p element for the product quantity
+        let productQty = document.createElement("p");
+        productQty.textContent =`Quantity:${item.quantity} Kg`;
+
+
+        //create a p element for the product stock
+        let productStock = document.createElement("p");
+        productStock.textContent = item.stock;    
 
 
         
@@ -60,11 +69,14 @@ showData.addEventListener('click', ()=>{
         // console.log(productName)
 
         productDiv.appendChild(productName);
+        productDiv.appendChild(productPrice);
+        productDiv.appendChild(productQty);
+        productDiv.appendChild(productStock);
 
 
 
         dataDisplay.appendChild(productDiv);
-
+    
 
     });
 
@@ -74,6 +86,7 @@ showData.addEventListener('click', ()=>{
 
 
     
+
 
 
 
