@@ -50,6 +50,37 @@ let stockDatas = [
     }
 ]
 
+let salesDatas = [
+    {
+        saleName :"Apple",
+        category : "Fruits",
+        quantitySold : 200,
+        revenue : 4000
+
+    },
+    {
+        saleName :"Beef",
+        category : "Meat",
+        quantitySold : 20,
+        revenue : 100000
+ 
+    },
+    {
+        saleName :"Tomato",
+        category : "Vegetables",
+        quantitySold : 80,
+        revenue : 2000
+
+    },
+    {   
+        saleName :"Chilly",
+        category : "Vegetables",
+        quantitySold : 20,
+        revenue : 1500
+    }
+]
+
+
 
 
 let showData = document.getElementById("showData");
@@ -158,6 +189,49 @@ stockData.addEventListener('click', ()=>{
 
     });
     //  console.log(stocks);
+})
+
+
+
+// Sales Datas
+
+let salesData = document.getElementById("salesData");
+let saleDisplay = document.getElementById("saleDisplay");
+
+salesData.addEventListener('click', ()=>{
+
+    // clear the container before display the sales Datas
+    saleDisplay.innerHTML = "";
+
+    salesDatas.map(item =>{
+
+        // create a new div for sales datas
+        let salesDataDiv = document.createElement("div");
+            salesDataDiv.classList.add("sales");
+
+            // create H3 tag for display sales datas
+
+        let saleName = document.createElement("h3");
+            saleName.textContent = `Saled Item : ${item.saleName}`
+
+        let saleCategory = document.createElement("h3");
+            saleCategory.textContent = `Category : ${item.category}`    
+               
+        let saleQty = document.createElement("h3");
+            saleQty.textContent = `Qty : ${item.quantitySold}`    
+
+        let saleRevenue = document.createElement("h3");
+            saleRevenue.textContent = `Revenue : ${item.revenue}`    
+            
+            salesDataDiv.appendChild(saleName);
+            salesDataDiv.appendChild(saleCategory);
+            salesDataDiv.appendChild(saleQty);
+            salesDataDiv.appendChild(saleRevenue);
+
+
+            saleDisplay.appendChild(salesDataDiv);
+    })
+
 })
 
 
