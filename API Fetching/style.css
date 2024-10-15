@@ -72,3 +72,29 @@
 .stock:hover{
     transform: translateY(-0.8rem);
 }
+
+/* sales Data div styling */
+
+#saleDisplay{
+   display: gird;
+   grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+   gap:1.25rem;
+   padding: 2rem;
+   margin: 0.625rem 0 0 27rem ;
+ 
+   
+
+}
+.sales{
+    border: 0.125rem solid #a472fa;
+    padding: 1.25rem;
+    border-radius: 0.625rem 1rem 1rem 1rem;
+    transition: transform 0.2s;
+    width: 21rem;
+    padding: 2.5rem;
+    transition: transform 0.2s;
+    
+}
+.sales:hover{
+    transform: translateY(-0.8rem);
+}
