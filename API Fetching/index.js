@@ -29,6 +29,29 @@ let marketData = [
 ]
 
 
+let stockDatas = [
+    {
+        stockName :"Apple",
+        stockQty :"200Kg"
+
+    },
+    {
+        stockName :"Orange",
+        stockQty :"300Kg"
+ 
+    },
+    {
+        stockName :"Beef",
+        stockQty :"1000Kg"
+
+    },
+    {   stockName :"Chicken",
+        stockQty :"2000Kg"
+    }
+]
+
+
+
 let showData = document.getElementById("showData");
 let dataDisplay = document.getElementById("dataDisplay");
 
@@ -48,22 +71,28 @@ showData.addEventListener('click', ()=>{
         //create a H3 element for product name
         let productName = document.createElement("h3");
         productName.textContent = item.name;
-        productName.style.color = "#fff";
+        productName.style.color = "#001219";
 
 
         //create a p element for the product price
         let productPrice = document.createElement("p");
         productPrice.textContent = `price : ${item.price}₹`;
+        productPrice.style.color="#fff";
+        productPrice.style.marginTop="1rem";
         
 
         //create a p element for the product quantity
         let productQty = document.createElement("p");
         productQty.textContent =`Quantity:${item.quantity} Kg`;
+        productQty.style.color="#fff";
+        productQty.style.marginTop="0.5rem";
 
 
         //create a p element for the product stock
         let productStock = document.createElement("p");
-        productStock.textContent = item.stock;    
+        productStock.textContent = item.stock;
+        productStock.style.color="#fff";
+        productStock.style.marginTop="0.5rem";    
 
 
         
@@ -85,6 +114,51 @@ showData.addEventListener('click', ()=>{
   
 
 });
+
+// stock item Datas
+
+
+let stockData = document.getElementById("stockData");
+let stockDisplay = document.getElementById("stockDisplay");
+
+stockData.addEventListener('click', ()=>{
+
+    stockDisplay.innerHTML = "";
+
+ let stocks =  stockDatas.map(item =>{
+
+    // create a new div for Stock Datas
+
+ let stockDataDiv = document.createElement("div");
+     stockDataDiv.classList.add("stock");   
+
+     // create h3 element for stockName and quantity
+
+     let stockName = document.createElement("h3");
+         stockName.textContent = item.stockName;
+
+     let stockQty = document.createElement("h4");
+         stockQty.textContent =`Qty :${item.stockQty}`;
+
+        //  console.log(stockQty);
+
+
+        //  Append child to stock div
+
+        stockDataDiv.appendChild(stockName);
+        stockDataDiv.appendChild(stockQty);
+
+      //Displaying 
+        stockDisplay.appendChild(stockDataDiv);
+        
+
+         
+
+       
+
+    });
+    //  console.log(stocks);
+})
 
 
     
